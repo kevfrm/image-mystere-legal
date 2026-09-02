@@ -1,121 +1,235 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
 <meta charset="utf-8">
-<title>Politique de confidentialité — L'Image Mystère</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index, follow">
+<title>Politique de confidentialité — L'Image Mystère</title>
+<style>
+  :root {
+    --bg: #ffffff;
+    --fg: #1f2328;
+    --muted: #5b6570;
+    --accent: #0f766e;
+    --border: #e3e6e8;
+    --card: #f6f8f8;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0f1416;
+      --fg: #e6edef;
+      --muted: #9aa7ac;
+      --accent: #5eead4;
+      --border: #26313333;
+      --card: #172023;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.65;
+    font-size: 17px;
+  }
+  main {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 48px 22px 80px;
+  }
+  h1 {
+    font-size: 1.9rem;
+    line-height: 1.25;
+    margin: 0 0 8px;
+  }
+  h2 {
+    font-size: 1.3rem;
+    margin: 44px 0 12px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--border);
+  }
+  h3 {
+    font-size: 1.08rem;
+    margin: 28px 0 8px;
+    color: var(--accent);
+  }
+  p { margin: 0 0 14px; }
+  ul { margin: 0 0 14px; padding-left: 1.35em; }
+  li { margin: 0 0 8px; }
+  a { color: var(--accent); }
+  a:hover { text-decoration: none; }
+  strong { font-weight: 650; }
+  .updated {
+    color: var(--muted);
+    font-size: 0.95rem;
+    margin: 0 0 32px;
+  }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 4px 20px;
+    margin: 16px 0;
+  }
+  footer {
+    margin-top: 56px;
+    padding-top: 18px;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 0.9rem;
+  }
+</style>
 </head>
 <body>
-<h1>Politique de confidentialité — L'Image Mystère</h1>
+<main>
 
-<p><em>Dernière mise à jour : 26 août 2026 (détail des données techniques transmises par les SDK
-Google Mobile Ads/Play Billing/UMP, mise en cohérence avec la déclaration « Sécurité des données »
-de la fiche Play Store).</em></p>
+  <h1>Politique de confidentialité — L'Image Mystère</h1>
+  <p class="updated">Dernière mise à jour : 2 septembre 2026 (ajout de Firebase Analytics et Firebase
+  Crashlytics, intégrés depuis la version 0.6.0 de l'application ; mise en cohérence avec la
+  déclaration « Sécurité des données » de la fiche Play Store).</p>
 
-<h2>Éditeur</h2>
-<p>L'Image Mystère est développée par kfrm games (limagemystere@gmail.com), développeur
-indépendant. Pour toute question sur cette politique ou vos données, contactez cette adresse.</p>
+  <h2>Éditeur</h2>
+  <p>L'Image Mystère est développée par kfrm games
+  (<a href="mailto:limagemystere@gmail.com">limagemystere@gmail.com</a>), développeur indépendant.
+  Pour toute question sur cette politique ou vos données, contactez cette adresse.</p>
 
-<h2>Ce que l'application ne fait pas</h2>
-<ul>
-  <li>Pas de compte, pas d'inscription, pas de connexion (ni identifiants, ni email demandés).</li>
-  <li>Pas de serveur propre à l'application : aucune donnée de jeu n'est envoyée à un service que
-  nous exploitons.</li>
-  <li>Pas de revente de données.</li>
-</ul>
+  <h2>Ce que l'application ne fait pas</h2>
+  <ul>
+    <li>Pas de compte, pas d'inscription, pas de connexion (ni identifiants, ni email demandés).</li>
+    <li>Pas de serveur propre à l'application : nous n'exploitons aucun serveur qui recevrait vos
+    données. Les données décrites plus bas (« Services tiers utilisés ») sont transmises aux
+    services de Google par leurs SDK, jamais à un service qui nous appartient.</li>
+    <li>Pas de revente de données.</li>
+  </ul>
 
-<h2>Données stockées localement sur votre appareil</h2>
-<p>Votre progression de jeu (niveau atteint, solde de pièces, statut premium) est enregistrée
-uniquement sur votre appareil (stockage local de l'application). Ces données ne sont jamais
-transmises à nous ni à un tiers. Elles sont supprimées si vous désinstallez l'application ou
-effacez ses données depuis les réglages Android.</p>
+  <h2>Données stockées localement sur votre appareil</h2>
+  <p>Votre progression de jeu (niveau atteint, solde de pièces, statut premium) est enregistrée
+  uniquement sur votre appareil (stockage local de l'application). Ces données ne sont jamais
+  transmises à nous ni à un tiers. Elles sont supprimées si vous désinstallez l'application ou
+  effacez ses données depuis les réglages Android.</p>
 
-<h2>Notification du rappel du matin</h2>
-<p>Si vous activez le rappel du matin (Paramètres &gt; Notifications), l'application planifie une
-notification locale quotidienne directement sur votre appareil (via WorkManager, une bibliothèque
-Android standard). Cette planification est <strong>entièrement locale</strong> : aucune donnée
-n'est envoyée à nous ni à un tiers pour la déclencher, il n'y a pas de service de notifications
-push distant. Vous pouvez désactiver ce rappel à tout moment depuis les Paramètres de l'application
-ou depuis les réglages de notifications de votre téléphone.</p>
+  <h2>Notification du rappel du matin</h2>
+  <p>Si vous activez le rappel du matin (Paramètres &gt; Notifications), l'application planifie une
+  notification locale quotidienne directement sur votre appareil (via WorkManager, une bibliothèque
+  Android standard). Cette planification est <strong>entièrement locale</strong> : aucune donnée
+  n'est envoyée à nous ni à un tiers pour la déclencher, il n'y a pas de service de notifications
+  push distant. Vous pouvez désactiver ce rappel à tout moment depuis les Paramètres de
+  l'application ou depuis les réglages de notifications de votre téléphone.</p>
 
-<h2>Votre consentement pour la publicité (utilisateurs UE, Royaume-Uni, Suisse)</h2>
-<p>Au premier lancement (et à chaque mise à jour de nos partenaires publicitaires), l'application
-vous présente un formulaire de consentement avant d'afficher toute publicité personnalisée, si vous
-vous trouvez dans l'Espace économique européen, au Royaume-Uni ou en Suisse. Ce formulaire est
-fourni par la plateforme de gestion du consentement (CMP) certifiée de Google. Tant que vous n'avez
-pas répondu, aucune publicité personnalisée n'est demandée.</p>
-<p>Vous pouvez revenir sur votre choix à tout moment depuis <strong>Paramètres &gt; Confidentialité
-&gt; Gérer mes préférences de confidentialité</strong> (visible uniquement si votre région
-l'exige).</p>
+  <h2>Votre consentement pour la publicité (utilisateurs UE, Royaume-Uni, Suisse)</h2>
+  <p>Au premier lancement (et à chaque mise à jour de nos partenaires publicitaires), l'application
+  vous présente un formulaire de consentement avant d'afficher toute publicité personnalisée, si
+  vous vous trouvez dans l'Espace économique européen, au Royaume-Uni ou en Suisse. Ce formulaire
+  est fourni par la plateforme de gestion du consentement (CMP) certifiée de Google. Tant que vous
+  n'avez pas répondu, aucune publicité personnalisée n'est demandée.</p>
+  <p>Vous pouvez revenir sur votre choix à tout moment depuis <strong>Paramètres &gt;
+  Confidentialité &gt; Gérer mes préférences de confidentialité</strong> (visible uniquement si
+  votre région l'exige).</p>
 
-<h2>Services tiers utilisés</h2>
-<p>L'application intègre trois SDK Google, qui peuvent collecter et traiter des données selon
-leurs propres politiques de confidentialité (nous n'avons pas accès à ces données individuellement).
-Tout le trafic réseau de ces SDK est chiffré en transit (HTTPS/TLS) ; l'application ne fait aucun
-appel réseau en dehors d'eux.</p>
+  <h2>Services tiers utilisés</h2>
+  <p>L'application intègre les SDK Google suivants (Google Mobile Ads, Google Play Billing, User
+  Messaging Platform, Firebase Analytics et Firebase Crashlytics), qui peuvent collecter et traiter
+  des données selon leurs propres politiques de confidentialité. Nous n'avons pas accès aux données
+  individuelles des joueurs : uniquement à des statistiques agrégées côté publicité et mesure
+  d'audience. Tout le trafic réseau de ces SDK est chiffré en transit (HTTPS/TLS) ; l'application
+  n'effectue elle-même aucun appel réseau propre en dehors de ceux réalisés par ces SDK.</p>
 
-<h3>Google Mobile Ads (AdMob)</h3>
-<p>Affiche les publicités (bannière et interstitiel) qui financent l'application pour les joueurs
-non premium. Ce SDK transmet automatiquement à Google, pour chaque appareil :</p>
-<ul>
-  <li>l'identifiant publicitaire Android et l'App set ID (identifiants de l'appareil) ;</li>
-  <li>l'adresse IP, dont Google déduit une position <strong>approximative</strong> (la région
-  générale, pas une localisation précise) — l'application elle-même ne demande aucune permission
-  de localisation et n'accède à aucune donnée GPS ;</li>
-  <li>vos interactions avec les publicités (affichages, clics) ;</li>
-  <li>des informations techniques et de diagnostic sur l'appareil, utiles à Google pour la
-  fiabilité et la sécurité de son service publicitaire.</li>
-</ul>
-<p>Ces données sont <strong>partagées avec Google</strong>, qui les traite pour ses propres
-finalités : diffusion et personnalisation des annonces, mesure d'audience, prévention des fraudes.
-Elles ne transitent jamais par un serveur que nous exploitons. Selon votre région, votre
-consentement à la personnalisation est recueilli via le formulaire décrit ci-dessus ; vous pouvez
-aussi réinitialiser ou supprimer votre identifiant publicitaire depuis les paramètres Google de
-votre téléphone (Paramètres &gt; Google &gt; Publicités). Voir la
-<a href="https://policies.google.com/privacy">politique de confidentialité Google</a> et la page
-<a href="https://policies.google.com/technologies/partner-sites">Partenaires publicitaires de
-Google</a>.</p>
+  <h3>Google Mobile Ads (AdMob)</h3>
+  <p>Affiche les publicités (bannière et interstitiel) qui financent l'application pour les joueurs
+  non premium. Ce SDK transmet automatiquement à Google, pour chaque appareil :</p>
+  <ul>
+    <li>l'identifiant publicitaire Android et l'App set ID (identifiants de l'appareil) ;</li>
+    <li>l'adresse IP, dont Google déduit une position <strong>approximative</strong> (la région
+    générale, pas une localisation précise) — l'application elle-même ne demande aucune permission
+    de localisation et n'accède à aucune donnée GPS ;</li>
+    <li>vos interactions avec les publicités (affichages, clics) ;</li>
+    <li>des informations techniques et de diagnostic sur l'appareil, utiles à Google pour la
+    fiabilité et la sécurité de son service publicitaire.</li>
+  </ul>
+  <p>Ces données sont <strong>partagées avec Google</strong>, qui les traite pour ses propres
+  finalités : diffusion et personnalisation des annonces, mesure d'audience, prévention des
+  fraudes. Elles ne transitent jamais par un serveur que nous exploitons. Selon votre région,
+  votre consentement à la personnalisation est recueilli via le formulaire décrit ci-dessus ; vous
+  pouvez aussi réinitialiser ou supprimer votre identifiant publicitaire depuis les paramètres
+  Google de votre téléphone (Paramètres &gt; Google &gt; Publicités). Voir la
+  <a href="https://policies.google.com/privacy">politique de confidentialité Google</a> et la page
+  <a href="https://policies.google.com/technologies/partner-sites">Partenaires publicitaires de
+  Google</a>.</p>
 
-<h3>Google Play Billing</h3>
-<p>Traite les achats intégrés (packs de pièces, option premium sans publicité). La transaction est
-gérée intégralement par Google Play : nous ne recevons ni ne stockons aucun moyen de paiement.
-L'application interroge seulement l'état de vos achats auprès de Google Play pour créditer vos
-pièces ou activer la version sans publicité — cet historique d'achats reste rattaché à votre
-compte Google Play, pas à un compte que nous gérerions. Voir la
-<a href="https://policies.google.com/privacy">politique de confidentialité Google</a>.</p>
+  <h3>Google Play Billing</h3>
+  <p>Traite les achats intégrés (packs de pièces, option premium sans publicité). La transaction
+  est gérée intégralement par Google Play : nous ne recevons ni ne stockons aucun moyen de
+  paiement. L'application interroge seulement l'état de vos achats auprès de Google Play pour
+  créditer vos pièces ou activer la version sans publicité — cet historique d'achats reste rattaché
+  à votre compte Google Play, pas à un compte que nous gérerions. Voir la
+  <a href="https://policies.google.com/privacy">politique de confidentialité Google</a>.</p>
 
-<h3>User Messaging Platform (UMP)</h3>
-<p>Le SDK qui affiche le formulaire de consentement décrit ci-dessus aux utilisateurs situés dans
-l'Espace économique européen, au Royaume-Uni ou en Suisse. Il ne collecte aucune donnée de jeu :
-seul votre choix de consentement est mémorisé, localement sur votre appareil.</p>
+  <h3>User Messaging Platform (UMP)</h3>
+  <p>Le SDK qui affiche le formulaire de consentement décrit ci-dessus aux utilisateurs situés
+  dans l'Espace économique européen, au Royaume-Uni ou en Suisse. Il ne collecte aucune donnée de
+  jeu : seul votre choix de consentement est mémorisé, localement sur votre appareil.</p>
 
-<h2>Publicité destinée aux enfants</h2>
-<p>L'application ne cible pas spécifiquement un jeune public et ne demande aucune information
-personnelle. Si le classement de contenu retenu sur le Play Store venait à inclure une audience
-enfant, la configuration des publicités (AdMob) devra être ajustée en conséquence (annonces
-adaptées à la famille) avant publication.</p>
+  <h3>Firebase Analytics</h3>
+  <p>Mesure l'usage réel du jeu pour nous aider à équilibrer la difficulté des niveaux. Ce SDK
+  enregistre des évènements d'usage (niveau démarré ou terminé, indice utilisé, boutique ouverte,
+  achat effectué, publicité affichée), un identifiant d'installation généré par Firebase, et des
+  informations techniques sur l'appareil (modèle, version d'Android, langue, pays approximatif
+  déduit de l'adresse IP). Ces données sont transmises à Google et ne transitent jamais par un
+  serveur que nous exploitons ; nous n'y accédons que sous forme de statistiques agrégées, jamais
+  comme un profil individuel identifiable. Pour les utilisateurs de l'Espace économique européen,
+  du Royaume-Uni et de Suisse, cette collecte est soumise au <strong>même consentement que la
+  publicité</strong> (formulaire décrit plus haut) : tant que vous n'avez pas accepté, aucun
+  évènement Firebase Analytics n'est envoyé.</p>
 
-<h2>Vos droits</h2>
-<p>N'ayant pas de compte ni de serveur propre, nous (l'éditeur) ne collectons directement aucune
-donnée personnelle identifiable : il n'y a rien à vous communiquer ou à supprimer de notre côté.</p>
-<p>Les SDK Google décrits ci-dessus transmettent en revanche certaines données techniques à Google
-pour leurs propres finalités. Vous gardez la main dessus :</p>
-<ul>
-  <li><strong>Identifiant publicitaire</strong> : réinitialisez-le ou supprimez-le depuis les
-  paramètres Google de votre téléphone (Paramètres &gt; Google &gt; Publicités).</li>
-  <li><strong>Consentement à la publicité personnalisée</strong> (utilisateurs EEE/Royaume-Uni/
-  Suisse) : revenez dessus à tout moment depuis <strong>Paramètres &gt; Confidentialité &gt; Gérer
-  mes préférences de confidentialité</strong> dans l'application (visible uniquement si votre
-  région l'exige).</li>
-  <li><strong>Historique des achats</strong> : consultez-le ou gérez-le depuis votre compte Google
-  Play (app Play Store &gt; menu &gt; Paiements et abonnements).</li>
-</ul>
-<p>Pour toute autre question relative aux données traitées par Google, consultez les liens
-ci-dessus ou vos paramètres de compte Google.</p>
+  <h3>Firebase Crashlytics</h3>
+  <p>En cas de plantage de l'application, transmet à Google un rapport technique : trace de la
+  pile, modèle d'appareil, version d'Android, état de la mémoire, et un identifiant d'installation.
+  Ce rapport ne contient aucune donnée de jeu, aucun contenu que vous avez saisi et aucune
+  information personnelle : il sert uniquement à corriger les bugs.</p>
+  <p>Pour ces deux services, voir la
+  <a href="https://policies.google.com/privacy">politique de confidentialité Google</a> et
+  <a href="https://firebase.google.com/support/privacy">Confidentialité et sécurité dans
+  Firebase</a>.</p>
 
-<h2>Modifications de cette politique</h2>
-<p>Cette politique peut être mise à jour si l'application évolue (ex. ajout d'un nouveau service
-tiers). La date de dernière mise à jour en haut de ce document sera modifiée en conséquence.</p>
+  <h2>Publicité destinée aux enfants</h2>
+  <p>L'application ne cible pas spécifiquement un jeune public et ne demande aucune information
+  personnelle. Si le classement de contenu retenu sur le Play Store venait à inclure une audience
+  enfant, la configuration des publicités (AdMob) serait ajustée en conséquence (annonces adaptées
+  à la famille) avant publication.</p>
 
+  <h2>Vos droits</h2>
+  <p>N'ayant pas de compte ni de serveur propre, nous (l'éditeur) ne détenons aucune base de
+  données de joueurs : nous n'avons rien à vous communiquer ou à supprimer de notre côté. Pour
+  toute demande relative à vos données (accès, suppression), écrivez à
+  <a href="mailto:limagemystere@gmail.com">limagemystere@gmail.com</a> : nous vous orienterons vers
+  le bon interlocuteur ou le bon réglage.</p>
+  <p>Les SDK Google décrits ci-dessus transmettent certaines données à Google pour leurs propres
+  finalités. Vous gardez la main dessus :</p>
+  <ul>
+    <li><strong>Identifiant publicitaire</strong> : réinitialisez-le ou supprimez-le depuis les
+    paramètres Google de votre téléphone (Paramètres &gt; Google &gt; Publicités).</li>
+    <li><strong>Consentement à la publicité et à la mesure d'audience</strong> (utilisateurs
+    EEE/Royaume-Uni/Suisse) : revenez dessus à tout moment depuis <strong>Paramètres &gt;
+    Confidentialité &gt; Gérer mes préférences de confidentialité</strong> dans l'application
+    (visible uniquement si votre région l'exige). Refuser bloque à la fois la publicité
+    personnalisée et la collecte Firebase Analytics.</li>
+    <li><strong>Historique des achats</strong> : consultez-le ou gérez-le depuis votre compte
+    Google Play (app Play Store &gt; menu &gt; Paiements et abonnements).</li>
+  </ul>
+  <p>Pour toute autre question relative aux données traitées par Google, consultez les liens
+  ci-dessus ou vos paramètres de compte Google.</p>
+
+  <h2>Modifications de cette politique</h2>
+  <p>Cette politique peut être mise à jour si l'application évolue (ex. ajout d'un nouveau service
+  tiers). La date de dernière mise à jour en haut de ce document sera modifiée en conséquence.</p>
+
+  <footer>
+    L'Image Mystère — kfrm games ·
+    <a href="mailto:limagemystere@gmail.com">limagemystere@gmail.com</a>
+  </footer>
+
+</main>
 </body>
 </html>
